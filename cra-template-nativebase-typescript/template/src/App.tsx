@@ -52,7 +52,7 @@ function ToggleDarkMode() {
       <Switch
         isChecked={colorMode === "light" ? true : false}
         onToggle={toggleColorMode}
-        accessibilityLabel={
+        aria-label={
           colorMode === "light" ? "switch to dark mode" : "switch to light mode"
         }
       />
