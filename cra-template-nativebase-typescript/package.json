@@ -1,0 +1,28 @@
+{
+  "name": "cra-template-nativebase-typescript",
+  "version": "1.1.2",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typescript",
+    "nativebase"
+  ],
+  "description": "The base TypeScript template for Create React App with NativeBase.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeekyAnts/nativebase-templates.git",
+    "directory": "cra-template-nativebase-typescript"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "bugs": {
+    "url": "https://github.com/GeekyAnts/nativebase-templates/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
