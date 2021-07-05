@@ -2,6 +2,19 @@
   "name": "expo-template-nativebase",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "keywords": [
+    "react",
+    "expo",
+    "template",
+    "nativebase"
+  ],
+  "description": "The base template for expo with NativeBase.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeekyAnts/nativebase-templates.git",
+    "directory": "expo-nativebase"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

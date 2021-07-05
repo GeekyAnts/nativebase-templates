@@ -14,6 +14,7 @@ import {
   VStack,
   Code,
 } from "native-base";
+import NativeBaseIcon from "./components/NativeBaseIcon";
 
 // Define the config
 const config = {
@@ -34,15 +35,10 @@ export default function App() {
         flex={1}
       >
         <VStack space={5} alignItems="center">
-          <Image
-            source={require("./assets/nativebase-logo.svg")}
-            resizeMode="contain"
-            size={220}
-            alt="NativeBase logo"
-          />
+          <NativeBaseIcon />
           <Heading size="lg">Welcome to NativeBase</Heading>
           <Text>
-            Edit <Code>src/App.js</Code> and save to reload
+            Edit <Code>App.tsx</Code> and save to reload.
           </Text>
           <Link href="https://docs.nativebase.io" isExternal>
             <Text color="primary.500" underline fontSize={"xl"}>

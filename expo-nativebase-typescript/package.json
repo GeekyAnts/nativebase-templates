@@ -2,6 +2,20 @@
   "name": "expo-template-nativebase-typescript",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "keywords": [
+    "react",
+    "expo",
+    "template",
+    "typescript",
+    "nativebase"
+  ],
+  "description": "The base TypeScript template for expo with NativeBase.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeekyAnts/nativebase-templates.git",
+    "directory": "expo-nativebase-typescript"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -27,6 +41,5 @@
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
     "typescript": "~4.0.0"
-  },
-  "private": true
+  }
 }
