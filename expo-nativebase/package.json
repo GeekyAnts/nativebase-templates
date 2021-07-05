@@ -11,7 +11,7 @@
   "description": "The base template for expo with NativeBase.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GeekyAnts/nativebase-templates.git",
+    "url": "git+https://github.com/GeekyAnts/nativebase-templates.git",
     "directory": "expo-nativebase"
   },
   "license": "MIT",
@@ -37,5 +37,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/GeekyAnts/nativebase-templates/issues"
+  },
+  "homepage": "https://github.com/GeekyAnts/nativebase-templates#readme",
+  "author": "Aditya Jamuar"
 }
