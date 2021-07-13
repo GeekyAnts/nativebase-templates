@@ -1,0 +1,12 @@
+{
+  "name": "react-native-template-nativebase",
+  "version": "1.0.0",
+  "description": "The base template for React Native with NativeBase.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeekyAnts/nativebase-templates.git",
+    "directory": "react-native-nativebase"
+  },
+  "author": "GeekyAnts",
+  "license": "MIT"
+}
