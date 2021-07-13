@@ -1,0 +1,17 @@
+{
+  "name": "react-native-template-nativebase-typescript",
+  "version": "1.0.0",
+  "keywords": [
+    "react-native",
+    "template",
+    "typescript",
+    "nativebase"
+  ],
+  "description": "The base template for React-Native TypeScript with NativeBase.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeekyAnts/nativebase-templates.git",
+    "directory": "react-native-template-nativebase-typescript"
+  },
+  "license": "MIT"
+}
