@@ -1,9 +1,9 @@
-# React Native Template With NativeBase Typescript
+# React Native Template With NativeBase
 
 ## Usage
 
 ```sh
-npx react-native init MyApp --template react-native-template-nativebase-typescript
+npx react-native init MyApp --template react-native-template-nativebase
 ```
 
 ### Note on the legacy CLI
