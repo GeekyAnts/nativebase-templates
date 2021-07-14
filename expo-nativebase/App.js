@@ -37,9 +37,11 @@ export default function App() {
         <VStack space={5} alignItems="center">
           <NativeBaseIcon />
           <Heading size="lg">Welcome to NativeBase</Heading>
-          <Text>
-            Edit <Code>App.js</Code> and save to reload.
-          </Text>
+          <HStack space={2} alignItems="center">
+            <Text>Edit</Text>
+            <Code>App.js</Code>
+            <Text>and save to reload.</Text>
+          </HStack>
           <Link href="https://docs.nativebase.io" isExternal>
             <Text color="primary.500" underline fontSize={"xl"}>
               Learn NativeBase
@@ -56,7 +58,7 @@ export default function App() {
 function ToggleDarkMode() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <HStack space={2}>
+    <HStack space={2} alignItems="center">
       <Text>Dark</Text>
       <Switch
         isChecked={colorMode === "light" ? true : false}
