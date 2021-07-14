@@ -19,7 +19,7 @@ import {
   VStack,
   Code,
 } from 'native-base';
-import NativeBaseIcon from './components/NativeBaseIcon';
+import NativeBaseIcon from './src/components/NativeBaseIcon';
 
 // Color Switch Component
 function ToggleDarkMode() {
