@@ -1,6 +1,6 @@
 {
   "name": "expo-template-native-base",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "keywords": [
     "react",
@@ -37,5 +37,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/GeekyAnts/nativebase-templates/issues"
+  },
+  "homepage": "https://github.com/GeekyAnts/nativebase-templates#readme",
+  "author": "Aditya Jamuar"
 }

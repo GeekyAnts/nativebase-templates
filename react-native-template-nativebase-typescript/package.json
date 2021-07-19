@@ -10,8 +10,19 @@
   "description": "The base template for React-Native TypeScript with NativeBase.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GeekyAnts/nativebase-templates.git",
+    "url": "git+https://github.com/GeekyAnts/nativebase-templates.git",
     "directory": "react-native-template-nativebase-typescript"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GeekyAnts/nativebase-templates/issues"
+  },
+  "homepage": "https://github.com/GeekyAnts/nativebase-templates#readme",
+  "main": "template.config.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aditya Jamuar"
 }
