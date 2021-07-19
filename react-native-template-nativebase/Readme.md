@@ -3,7 +3,7 @@
 ## Usage
 
 ```sh
-npx react-native init MyApp --template react-native-template-nativebase
+npx react-native init MyApp --template react-native-template-native-base
 ```
 
 ### Note on the legacy CLI
