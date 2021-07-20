@@ -12,6 +12,10 @@
     "url": "git+https://github.com/GeekyAnts/nativebase-templates.git",
     "directory": "react-native-template-nativebase"
   },
+  "files": [
+    "template",
+    "template.config.js"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/GeekyAnts/nativebase-templates/issues"

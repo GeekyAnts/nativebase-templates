@@ -25,7 +25,7 @@ import NativeBaseIcon from './src/components/NativeBaseIcon';
 
 // Color Switch Component
 function ToggleDarkMode() {
-  const {colorMode, toggleColorMode} = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <HStack space={2} alignItems="center">
       <Text>Dark</Text>
@@ -44,8 +44,8 @@ const App = () => {
   return (
     <NativeBaseProvider>
       <Center
-        _dark={{bg: 'blueGray.900'}}
-        _light={{bg: 'blueGray.50'}}
+        _dark={{ bg: 'blueGray.900' }}
+        _light={{ bg: 'blueGray.50' }}
         px={4}
         flex={1}>
         <VStack space={5} alignItems="center">
@@ -53,7 +53,7 @@ const App = () => {
           <Heading size="lg">Welcome to NativeBase</Heading>
           <HStack space={2} alignItems="center">
             <Text>Edit</Text>
-            <Code>App.js</Code>
+            <Code>App.tsx</Code>
             <Text>and save to reload.</Text>
           </HStack>
           <Link href="https://docs.nativebase.io" isExternal>
