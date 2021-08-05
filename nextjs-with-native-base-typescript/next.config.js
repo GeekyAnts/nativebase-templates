@@ -29,6 +29,7 @@ module.exports = withPlugins([withTM], {
     };
     config.resolve.extensions = [
       '.web.js',
+      '.web.jsx',
       '.web.ts',
       '.web.tsx',
       ...config.resolve.extensions,
