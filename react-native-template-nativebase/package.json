@@ -1,0 +1,31 @@
+{
+  "name": "react-native-template-native-base",
+  "version": "1.0.4",
+  "keywords": [
+    "react-native",
+    "template",
+    "nativebase"
+  ],
+  "description": "The base template for react-native with NativeBase.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeekyAnts/nativebase-templates.git",
+    "directory": "react-native-template-nativebase"
+  },
+  "files": [
+    "template",
+    "template.config.js"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GeekyAnts/nativebase-templates/issues"
+  },
+  "homepage": "https://github.com/GeekyAnts/nativebase-templates#readme",
+  "main": "template.config.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aditya Jamuar"
+}

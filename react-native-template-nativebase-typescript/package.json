@@ -1,0 +1,32 @@
+{
+  "name": "react-native-template-native-base-typescript",
+  "version": "1.0.3",
+  "keywords": [
+    "react-native",
+    "template",
+    "typescript",
+    "nativebase"
+  ],
+  "description": "The base template for React-Native TypeScript with NativeBase.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeekyAnts/nativebase-templates.git",
+    "directory": "react-native-template-nativebase-typescript"
+  },
+  "files": [
+    "template",
+    "template.config.js"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GeekyAnts/nativebase-templates/issues"
+  },
+  "homepage": "https://github.com/GeekyAnts/nativebase-templates#readme",
+  "main": "template.config.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aditya Jamuar"
+}
