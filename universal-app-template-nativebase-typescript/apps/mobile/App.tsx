@@ -7,7 +7,7 @@ import {
   NativeBaseIcon,
   theme,
   ToggleDarkMode,
-} from "../components/src/export";
+} from "universal-components";
 
 export default function App() {
   return (
