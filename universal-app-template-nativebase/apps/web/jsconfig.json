@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "paths": {
+      "universal-components": ["../../apps/components"]
+    }
+  },
+  "include": ["**/*.js", "**/*.jsx", "babel.config.js", "src/pages/index.js", "src/pages/_document.js", "src/pages/_app.js"],
+  "exclude": ["node_modules"]
+}
