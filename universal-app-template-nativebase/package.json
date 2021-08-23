@@ -7,8 +7,7 @@
   "workspaces": [
     "apps/components",
     "apps/mobile",
-    "apps/web",
-    "apps/app"
+    "apps/web"
   ],
   "description": "",
   "main": "index.js",
