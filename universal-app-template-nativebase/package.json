@@ -12,12 +12,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:web": "npm --prefix apps/web run dev",
-    "start:app": "npm --prefix apps/mobile run start",
-    "start:app:ios": "npm --prefix apps/mobile run ios",
-    "start:app:android": "npm --prefix apps/mobile run android",
-    "start:components": "npm --prefix apps/components run start"
+    "start:web": "yarn --cwd apps/web run dev",
+    "start:app": "yarn --cwd apps/mobile run start",
+    "start:app:ios": "yarn --cwd apps/mobile run ios",
+    "start:app:android": "yarn --cwd apps/mobile run android",
+    "start:components": "yarn --cwd apps/components run start"
   },
+  "private": true,
   "keywords": [
     "Universal app",
     "NativeBase",
