@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  Box,
-  Image,
   Text,
   Link,
   HStack,
