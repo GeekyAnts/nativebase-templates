@@ -7,9 +7,3 @@ The official NativeBase template for [Create React App](https://reactjs.org/docs
 ```sh
 npx create-react-app my-app --template nativebase
 ```
-
-## TypeScript
-
-```sh
-npx create-react-app my-app --template nativebase-typescript
-```
