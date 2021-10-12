@@ -1,4 +1,4 @@
-# expo-template-nativebase-typescript
+# expo-template-native-base-typescript
 
 The official NativeBase TypeScript template for [Expo](https://docs.expo.io/)
 
