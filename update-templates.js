@@ -4,108 +4,116 @@ const fs = require('fs');
 
 
 const version = process.argv[2].trim();
-const releaseBranch = 'release/' + version;
 
 
-
-//updateExpoTemplate();
-//updateExpoTemplateTypescipt();
-//updateReactNativeTemplate();
-//updateReactNativeTemplateTypeScript();
-//updateNextJsTemplate();
+// updateExpoTemplate();
+// updateExpoTemplateTypescipt();
+// updateReactNativeTemplate();
+// updateReactNativeTemplateTypeScript();
+// updateNextJsTemplate();
 //updateNextJsTemplateTypeScript();
-//updateCraTemplate();
-//updateCraTemplateTypeScript();
-updateUniversalAppTemplate();
+// updateCraTemplate();
+// updateCraTemplateTypeScript();
+// updateUniversalAppTemplate();
+// updateUniversalAppTypeScriptTemplate();
 
-
+function updateUniversalAppTypeScriptTemplate() {
+    const templateName = "universal-app-template-nativebase-typescript";
+    const basePath = templateName;
+    updateUniversalTemplatesPackageJson(basePath, templateName);
+}
 
 
 function updateUniversalAppTemplate() {
-    const basePath = "universal-app-template-nativebase";
-    const componentFilePath = path.resolve(`${basePath}/apps/components`, "package.json");
-    const mobileFilePath = path.resolve(`${basePath}/apps/mobile`, "package.json");
-    const webFilePath = path.resolve(`${basePath}/apps/web`, "package.json");
-    readJSONFile(componentFilePath, "universal-templates");
-    readJSONFile(mobileFilePath, "universal-templates");
-    readJSONFile(webFilePath, "universal-templates");
-    const child = spawn(`cd ${basePath} && yarn install`, {
-        shell: true
-    });
-
-    child.stdout.on("data", function (data) {
-        console.log(`${data} `);
-    });
-    child.stderr.on("data", data => {
-        console.log(`stderr: ${data} `);
-    });
-    child.on("error", error => {
-        console.log(`error: ${error.message} `);
-    });
-    child.on("close", () => {
-        console.log(`Universal App templates Finished`);
-    });
+    const templateName = "universal-app-template-nativebase";
+    const basePath = templateName;
+    updateUniversalTemplatesPackageJson(basePath, templateName);
 }
+
+
+function updateUniversalTemplatesPackageJson(basePath, templateName) {
+
+    const folders = ['components', 'mobile', 'web'];
+    for (let i = 0; i < folders.length; i++) {
+        const packageJSONFilePath = path.resolve(`${basePath}/apps/${folders[i]}`, "package.json");
+        updateNBVersionInJsonFile(packageJSONFilePath, "universal-templates", templateName);
+    }
+    executeShellCommand(`cd ${basePath} && yarn install`, `yarn install done in ${templateName}`)
+}
+
 
 
 function updateCraTemplate() {
-    const filePath = path.resolve("cra-template-nativebase", "template.json");
-    readJSONFile(filePath, "cra-templates");
-
+    const templateName = "cra-template-nativebase";
+    const basePath = path.resolve(templateName);
+    const templateJSONFilePath = `${basePath}/template.json`;
+    updateNBVersionInJsonFile(templateJSONFilePath, "cra-templates", templateName);
+    // bumpVersion(basePath, templateName);
 }
 
 function updateCraTemplateTypeScript() {
-    const filePath = path.resolve("cra-template-nativebase-typescript", "template.json");
-    readJSONFile(filePath, "cra-templates");
+    const templateName = "cra-template-nativebase-typescript";
+    const basePath = path.resolve(templateName);
+    const templateJSONFilePath = `${basePath}/template.json`;
+    updateNBVersionInJsonFile(templateJSONFilePath, "cra-templates", templateName);
+    // bumpVersion(basePath, templateName);
 }
 
 
 
 function updateNextJsTemplate() {
-    const dirPath = path.resolve("nextjs-with-native-base");
-    updateTemplate(dirPath, version, "nextjs-template");
+    const templateName = "nextjs-with-native-base";
+    const dirPath = path.resolve(templateName);
+    updateNBVersion(dirPath, version, "nextjs-template");
 }
 
 function updateNextJsTemplateTypeScript() {
-    const dirPath = path.resolve("nextjs-with-native-base-typescript");
-    console.log(dirPath);
-    updateTemplate(dirPath, version, "nextjs-typescript-template");
+    const templateName = "nextjs-with-native-base-typescript";
+    const dirPath = path.resolve(templateName);
+    updateNBVersion(dirPath, version, "nextjs-typescript-template");
 }
 
 function updateReactNativeTemplateTypeScript() {
-    const dirPath = path.resolve("react-native-template-nativebase-typescript/template");
-    updateTemplate(dirPath, version, "react-native-typescript-template");
+    const templateName = "react-native-template-nativebase-typescript";
+    const basePath = path.resolve(templateName);
+    const dirPath = `${basePath}/template`;
+    updateNBVersion(dirPath, version, "react-native-typescript-template");
+    // bumpVersion(basePath, templateName);
 }
 
-
-
 function updateReactNativeTemplate() {
-    const dirPath = path.resolve("react-native-template-nativebase/template");
-    updateTemplate(dirPath, version, "react-native-template");
+    const templateName = "react-native-template-nativebase-typescript";
+    const basePath = path.resolve(templateName);
+    const dirPath = `${basePath}/template`;
+    updateNBVersion(dirPath, version, "react-native-template");
+    // bumpVersion(basePath, templateName);
 }
 
 
 function updateExpoTemplate() {
-    const dirPath = path.resolve("expo-nativebase");
-    updateTemplate(dirPath, version, "expo-template");
+    const templateName = "expo-nativebase";
+    const basePath = path.resolve(templateName);
+    updateNBVersion(basePath, version, "expo-template");
+    // bumpVersion(basePath, templateName);
 }
 
 function updateExpoTemplateTypescipt() {
-    const dirPath = path.resolve("expo-nativebase-typescript-template");
-    updateTemplate(dirPath, version, "expo-typescript-template");
+    const templateName = "expo-nativebase-typescript";
+    const basePath = path.resolve(templateName);
+    updateNBVersion(basePath, version, "expo-typescript-template");
+    // bumpVersion(basePath, templateName);
 }
 
 
 
-//utiltiy
+//utiltiy functions
 
-function updateTemplate(path, version, templateName) {
-    const child = spawn(`cd ${path} && yarn upgrade native-base@${version} `, {
+function executeShellCommand(command, msg) {
+    const child = spawn(command, {
         shell: true
     });
-
     child.stdout.on("data", function (data) {
-        console.log(`${data} `);
+        console.log(`${data}`);
     });
     child.stderr.on("data", data => {
         console.log(`stderr: ${data} `);
@@ -114,31 +122,40 @@ function updateTemplate(path, version, templateName) {
         console.log(`error: ${error.message} `);
     });
     child.on("close", () => {
-        console.log(`Finished ${templateName}`);
+        console.log('\x1b[32m%s\x1b[0m', msg);
     });
 }
 
+//updates nb version using yarn
+function updateNBVersion(path, version, templateName) {
+    const command = `cd ${path} && yarn upgrade native-base@${version}`;
+    executeShellCommand(command, `${templateName} nb version changed`);
+}
 
-function readJSONFile(filePath, templateName) {
-    return jsonReader(filePath, (err, data) => {
+
+//update native base version in json file by writing the file
+function updateNBVersionInJsonFile(filePath, templateType, templateName) {
+
+    jsonReader(filePath, (err, data) => {
         if (err) {
             console.log(err);
             return;
         }
-        if (templateName === "cra-template")
+        if (templateType === "cra-templates")
             data.package.dependencies['native-base'] = version;
-        else
+        else if (templateType === "universal-templates")
             data.dependencies['native-base'] = version;
-        writeJSONFile(filePath, data);
+        console.log('\x1b[32m%s\x1b[0m', 'calling')
+        writeJSONFile(filePath, data, templateName);
     });
 }
 
-function writeJSONFile(filePath, data) {
+function writeJSONFile(filePath, data, templateName) {
     fs.writeFile(filePath, JSON.stringify(data, null, 2), err => {
         if (err) {
             console.log('Error writing file', err)
         } else {
-            console.log('Successfully wrote file');
+            console.log('\x1b[32m%s\x1b[0m', 'Successfully updated nb version in', templateName);
         }
     })
 }
@@ -156,4 +173,9 @@ function jsonReader(filePath, cb) {
             return cb && cb(err);
         }
     });
+}
+
+//bump template version
+function bumpVersion(path, templateName) {
+    executeShellCommand(`cd ${path} && yarn version --patch`, `updated ${templateName} version`);
 }
