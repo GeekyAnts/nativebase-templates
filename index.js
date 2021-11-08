@@ -1,7 +1,7 @@
 const path = require('path');
 const version = process.argv[2].trim();
 
-const { templates, updateNBVersionInJsonFile, isUniversalTemplate, executeShellCommand } = require('./utils');
+const { templates, updateNBVersionInJsonFile, isUniversalTemplate, bumpVersion, executeShellCommand } = require('./utils');
 
 
 updateTemplates();
@@ -18,14 +18,14 @@ function updateTemplates() {
             templatePaths.forEach(templatePath => {
                 const command = `cd ${templatePath} && yarn upgrade native-base@${version}`;
                 executeShellCommand(command, `${name} nb version changed`);
-                // bumpVersion(repoPath, name);
+                bumpVersion(repoPath, name);
             });
         } else {
             //updates cra and universal templates
             updateNestedTemplates(templatePaths, name, version).then(() => {
                 if (isUniversalTemplate(name))
                     executeShellCommand(`cd ${repoPath} && yarn`, `yarn install done in ${name}`)
-                // bumpVersion(repoPath, name);
+                bumpVersion(repoPath, name);
             });
         }
     });

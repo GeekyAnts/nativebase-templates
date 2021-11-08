@@ -120,7 +120,6 @@ var self = {
         try {
             const fileData = await fs.readFile(filePath, "utf-8");
             const data = await JSON.parse(fileData);
-            console.log(data);
             if (!self.isUniversalTemplate(templateName))
                 data.package.dependencies['native-base'] = version;
             else
