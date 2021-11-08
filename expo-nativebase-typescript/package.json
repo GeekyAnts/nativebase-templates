@@ -1,6 +1,6 @@
 {
   "name": "expo-template-native-base-typescript",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "node_modules/expo/AppEntry.js",
   "keywords": [
     "react",
