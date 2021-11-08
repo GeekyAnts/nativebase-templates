@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "update-nativebase": "node index.js",
-    "publish-packages": "node publish-package.js",
-    "bump-version": "node bump-version.js"
+    "update": "node index.js",
+    "publish": "node publish-package.js",
+    "bump": "node bump-version.js"
   },
   "repository": {
     "type": "git",
