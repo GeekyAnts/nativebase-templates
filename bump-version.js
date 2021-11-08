@@ -1,6 +1,6 @@
 
 const path = require('path');
-const { templates } = require('./utils');
+const { template, bumpVersion } = require('./utils');
 
 
 init();
