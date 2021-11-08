@@ -1,13 +1,7 @@
-
 const path = require('path');
-
-
-
 const version = process.argv[2].trim();
 
-const { templates, updateNBVersionInJsonFile, executeShellCommand } = require('./utils');
-
-
+const { templates, updateNBVersionInJsonFile, isUniversalTemplate, executeShellCommand } = require('./utils');
 
 
 updateTemplates();
@@ -15,33 +9,34 @@ updateTemplates();
 
 
 function updateTemplates() {
-    //updates expo, next and react-native templates
+
     templates.forEach(template => {
-        const { name, path: jsonFilePath, nested } = template;
+        const { name, paths: templatePaths, nested } = template;
+        const repoPath = path.resolve(name);
         if (!nested) {
-            const command = `cd ${jsonFilePath} && yarn upgrade native-base@${version}`;
-            executeShellCommand(command, `${name} nb version changed`);
-            // bumpVersion(path, name);
+            //updates expo, next and react-native templates
+            templatePaths.forEach(templatePath => {
+                const command = `cd ${templatePath} && yarn upgrade native-base@${version}`;
+                executeShellCommand(command, `${name} nb version changed`);
+                // bumpVersion(repoPath, name);
+            });
         } else {
-            updateNestedTemplates(jsonFilePath, name, version).then(() => {
-                const repoPath = path.resolve(name);
-                executeShellCommand(`cd ${repoPath} && yarn`, `yarn install done in ${name}`)
-                // bumpVersion(foo, name);
+            //updates cra and universal templates
+            updateNestedTemplates(templatePaths, name, version).then(() => {
+                if (isUniversalTemplate(name))
+                    executeShellCommand(`cd ${repoPath} && yarn`, `yarn install done in ${name}`)
+                // bumpVersion(repoPath, name);
             });
         }
     });
 }
 
 
-async function updateNestedTemplates(jsonFilePath, name, version) {
+async function updateNestedTemplates(templatePaths, name, version) {
 
-    for (let i = 0; i < jsonFilePath.length; i++) {
-        const foo = jsonFilePath[i];
-        if (name === "universal-app-template-nativebase" ||
-            name === "universal-app-template-nativebase-typescript") {
-            await updateNBVersionInJsonFile(foo, "universal-templates", name, version);
-        } else {
-            await updateNBVersionInJsonFile(foo, "cra-templates", name, version);
-        }
+    for (let i = 0; i < templatePaths.length; i++) {
+        const templatePath = templatePaths[i];
+        const jsonFileName = isUniversalTemplate(name) ? "package.json" : "template.json";
+        await updateNBVersionInJsonFile(`${templatePath}/${jsonFileName}`, name, version);
     }
 }

@@ -15,7 +15,7 @@ function publishPackagesToNpm() {
         if (publishable) {
             const repoPath = path.resolve(name);
             const command = `cd ${repoPath} && yarn publish --new-version=${version}`
-            executeShellCommand(command, "exited");
+            executeShellCommand(command, `published ${name}!`);
         }
 
     });
