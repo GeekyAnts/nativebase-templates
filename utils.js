@@ -110,10 +110,6 @@ var self = {
             console.log('\x1b[32m%s\x1b[0m', msg);
         });
     },
-    //bump template version
-    bumpVersion: function (path, templateName) {
-        self.executeShellCommand(`cd ${path} && yarn version --patch`, `updated ${templateName} version`);
-    },
     //update native base version in json file by writing the file
     updateNBVersionInJsonFile: async function (filePath, templateName, version) {
 
