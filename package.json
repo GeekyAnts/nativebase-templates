@@ -1,0 +1,22 @@
+{
+  "name": "nativebase-templates",
+  "version": "1.0.0",
+  "description": "NativeBase Templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "node index.js",
+    "publish": "node publish-package.js",
+    "bump": "node bump-version.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeekyAnts/nativebase-templates.git"
+  },
+  "author": "NativeBase",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GeekyAnts/nativebase-templates/issues"
+  },
+  "homepage": "https://github.com/GeekyAnts/nativebase-templates#readme"
+}
