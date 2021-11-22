@@ -10,6 +10,11 @@ const theme = extendTheme({
   },
 });
 
+// extend the theme
+type MyThemeType = typeof theme;
+declare module "native-base" {
+  interface ICustomTheme extends MyThemeType {}
+}
 ReactDOM.render(
   <React.StrictMode>
     <NativeBaseProvider theme={theme}>
