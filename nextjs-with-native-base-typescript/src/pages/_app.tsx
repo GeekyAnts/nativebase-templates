@@ -4,6 +4,11 @@ import { AppProps } from "next/app";
 import { NativeBaseProvider } from "native-base";
 import { theme } from "../theme";
 
+// extend the theme
+type MyThemeType = typeof theme;
+declare module "native-base" {
+  interface ICustomTheme extends MyThemeType {}
+}
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>

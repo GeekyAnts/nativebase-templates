@@ -22,7 +22,10 @@ const config = {
 
 // extend the theme
 export const theme = extendTheme({ config });
-
+type MyThemeType = typeof theme;
+declare module "native-base" {
+  interface ICustomTheme extends MyThemeType {}
+}
 export default function App() {
   return (
     <NativeBaseProvider>
