@@ -8,7 +8,11 @@ import {
   theme,
   ToggleDarkMode,
 } from "universal-components";
-
+// extend the theme
+type MyThemeType = typeof theme;
+declare module "native-base" {
+  interface ICustomTheme extends MyThemeType {}
+}
 export default function App() {
   return (
     <NativeBaseProvider theme={theme}>

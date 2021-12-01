@@ -5,6 +5,11 @@ import { NativeBaseProvider } from "native-base";
 
 import { theme } from "universal-components";
 
+// extend the theme
+type MyThemeType = typeof theme;
+declare module "native-base" {
+  interface ICustomTheme extends MyThemeType {}
+}
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
