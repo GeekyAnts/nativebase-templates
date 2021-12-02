@@ -1,23 +1,29 @@
 {
-  "name": "with-react-native-web",
+  "name": "next-latest",
+  "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "native-base": "3.2.2",
-    "next": "11.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-native-safe-area-context": "^3.2.0",
-    "react-native-svg": "^12.1.1",
-    "react-native-web": "^0.13.14"
+    "@expo/vector-icons": "^12.0.5",
+    "expo-font": "^10.0.3",
+    "native-base": "^3.2.2",
+    "next": "12.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-web": "^0.17.5"
   },
   "devDependencies": {
-    "babel-plugin-react-native-web": "^0.13.14",
+    "@expo/next-adapter": "^3.1.10",
+    "babel-preset-expo": "^8.5.1",
+    "eslint": "7",
+    "eslint-config-next": "12.0.4",
     "next-compose-plugins": "^2.2.1",
-    "next-transpile-modules": "^8.0.0"
-  },
-  "license": "MIT"
+    "next-fonts": "^1.5.1",
+    "next-transpile-modules": "^9.0.0"
+  }
 }
