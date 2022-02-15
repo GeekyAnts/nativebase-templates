@@ -30,7 +30,7 @@ function ToggleDarkMode() {
     <HStack space={2} alignItems="center">
       <Text>Dark</Text>
       <Switch
-        isChecked={colorMode === 'light' ? true : false}
+        isChecked={colorMode === 'light'}
         onToggle={toggleColorMode}
         aria-label={
           colorMode === 'light' ? 'switch to dark mode' : 'switch to light mode'
