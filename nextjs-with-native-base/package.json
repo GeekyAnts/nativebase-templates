@@ -1,5 +1,5 @@
 {
-  "name": "next-latest",
+  "name": "@native-base/nextjs-template",
   "private": true,
   "scripts": {
     "dev": "next dev",
