@@ -50,7 +50,7 @@ function ToggleDarkMode() {
     <HStack space={2}>
       <Text>Dark</Text>
       <Switch
-        isChecked={colorMode === "light" ? true : false}
+        isChecked={colorMode === "light"}
         onToggle={toggleColorMode}
         accessibilityLabel={
           colorMode === "light" ? "switch to dark mode" : "switch to light mode"
