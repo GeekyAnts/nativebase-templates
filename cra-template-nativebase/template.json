@@ -5,13 +5,16 @@
       "@testing-library/react": "^11.1.0",
       "@testing-library/user-event": "^12.1.10",
       "web-vitals": "^1.0.1",
-      "native-base": "3.2.2",
+      "native-base": "3.3.6",
       "react-native-safe-area-context": "^3.2.0",
       "react-native-svg": "^12.1.1",
       "react-native-web": "^0.16.0"
     },
     "eslintConfig": {
-      "extends": ["react-app", "react-app/jest"]
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
     }
   }
 }
