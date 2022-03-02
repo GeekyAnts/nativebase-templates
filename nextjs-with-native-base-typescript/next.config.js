@@ -1,21 +1,27 @@
-// @generated: @expo/next-adapter@3.1.10
-// Learn more: https://github.com/expo/expo/blob/master/docs/pages/versions/unversioned/guides/using-nextjs.md#withexpo
+const { withNativebase } = require("@native-base/next-adapter");
+const path = require("path");
 
-const { withExpo } = require("@expo/next-adapter");
-const withFonts = require("next-fonts");
-const withPlugins = require("next-compose-plugins");
-const withTM = require("next-transpile-modules")([
-  "react-native-web",
-  "native-base",
-]);
-
-const nextConfig = {};
-
-module.exports = withPlugins(
-  [
-    withTM,
-    [withFonts, { projectRoot: __dirname }],
-    [withExpo, { projectRoot: __dirname }],
-  ],
-  nextConfig
-);
+module.exports = withNativebase({
+  dependencies: ["@native-base/icons", "react-native-web-linear-gradient"],
+  nextConfig: {
+    webpack: (config, options) => {
+      config.module.rules.push({
+        test: /\.ttf$/,
+        loader: "url-loader", // or directly file-loader
+        include: path.resolve(__dirname, "node_modules/@native-base/icons"),
+      });
+      config.resolve.alias = {
+        ...(config.resolve.alias || {}),
+        "react-native$": "react-native-web",
+        "react-native-linear-gradient": "react-native-web-linear-gradient",
+      };
+      config.resolve.extensions = [
+        ".web.js",
+        ".web.ts",
+        ".web.tsx",
+        ...config.resolve.extensions,
+      ];
+      return config;
+    },
+  },
+});
