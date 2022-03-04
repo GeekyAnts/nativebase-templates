@@ -25,7 +25,7 @@ import NativeBaseIcon from './src/components/NativeBaseIcon';
 
 // Color Switch Component
 function ToggleDarkMode() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const {colorMode, toggleColorMode} = useColorMode();
   return (
     <HStack space={2} alignItems="center">
       <Text>Dark</Text>
