@@ -10,7 +10,7 @@ import {
   HStack,
   Text,
   Heading,
-  Code,
+  Box,
   Link,
   VStack,
   Button,
@@ -44,7 +44,20 @@ export default function App() {
         </HStack>
         <Heading>Welcome to NativeBase</Heading>
         <Text>
-          Edit <Code>src/pages/index.js</Code> and save to reload.
+          Edit{" "}
+          <Box
+            _text={{
+              fontFamily: "monospace",
+              fontSize: "sm",
+            }}
+            px={2}
+            py={1}
+            _dark={{ bg: "blueGray.800" }}
+            _light={{ bg: "blueGray.200" }}
+          >
+            src/pages/index.js
+          </Box>{" "}
+          and save to reload.
         </Text>
         <HStack alignItems="center" space="sm">
           <Link href="https://nextjs.org/docs/getting-started" isExternal>
