@@ -9,7 +9,7 @@ import {
   Switch,
   useColorMode,
   VStack,
-  Code,
+  Box,
 } from "native-base";
 
 function App() {
@@ -31,7 +31,20 @@ function App() {
         />
         <Heading size="lg">Welcome to NativeBase</Heading>
         <Text>
-          Edit <Code>src/App.js</Code> and save to reload.
+          Edit{" "}
+          <Box
+            _text={{
+              fontFamily: "monospace",
+              fontSize: "sm",
+            }}
+            px={2}
+            py={1}
+            _dark={{ bg: "blueGray.800" }}
+            _light={{ bg: "blueGray.200" }}
+          >
+            src/pages/index.js
+          </Box>{" "}
+          and save to reload.
         </Text>
         <Link href="https://docs.nativebase.io" isExternal>
           <Text color="primary.500" underline fontSize={"xl"}>

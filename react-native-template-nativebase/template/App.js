@@ -17,7 +17,7 @@ import {
   useColorMode,
   NativeBaseProvider,
   VStack,
-  Code,
+  Box,
 } from 'native-base';
 import NativeBaseIcon from './src/components/NativeBaseIcon';
 
@@ -51,7 +51,13 @@ const App = () => {
           <Heading size="lg">Welcome to NativeBase</Heading>
           <HStack space={2} alignItems="center">
             <Text>Edit</Text>
-            <Code>App.js</Code>
+            <Box
+              px={2}
+              py={1}
+              _dark={{bg: 'blueGray.800'}}
+              _light={{bg: 'blueGray.200'}}>
+              App.js
+            </Box>
             <Text>and save to reload.</Text>
           </HStack>
           <Link href="https://docs.nativebase.io" isExternal>
