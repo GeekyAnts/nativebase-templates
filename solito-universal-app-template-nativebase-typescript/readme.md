@@ -11,8 +11,6 @@ We have already done the hard work for you and created a starter kit for you to 
 
 - Clone the repo: [https://github.com/GeekyAnts/nativebase-templates/tree/master/solito-universal-app-template-nativebase-typescript](https://github.com/GeekyAnts/nativebase-templates/tree/master/solito-universal-app-template-nativebase-typescript)
 - Run `yarn` or `npm install` on the root directory.
-- Then run `yarn` or `npm install` in apps/expo and apps/next.
-- Now run `yarn` or `npm install` in packages/app.
 
 That’s it your starter kit is ready to be used.
 
