@@ -17,6 +17,7 @@ export function ColorModeSwitch() {
       closeOnClick={false}
     >
       <IconButton
+        variant="unstyled"
         position="absolute"
         top={12}
         right={8}
