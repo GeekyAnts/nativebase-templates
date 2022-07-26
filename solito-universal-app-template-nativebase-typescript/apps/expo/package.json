@@ -10,13 +10,17 @@
     "react-native-gesture-handler": "~2.1.0",
     "react-native-reanimated": "~2.3.1",
     "react-native-safe-area-context": "3.3.2",
+    "react-native-svg": "^12.4.0",
     "react-native-web": "0.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
     "metro-minify-esbuild": "^0.1.0",
+    "react-native-screens": "*",
     "typescript": "~4.3.5"
   },
   "scripts": {
