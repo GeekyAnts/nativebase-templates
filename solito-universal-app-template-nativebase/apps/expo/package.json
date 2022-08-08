@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "@react-navigation/native": "*",
-    "@react-navigation/native-stack": "*",
     "app": "*",
     "expo": "^44.0.0",
     "expo-splash-screen": "~0.14.1",
@@ -12,7 +10,7 @@
     "react-native-gesture-handler": "~2.1.0",
     "react-native-reanimated": "~2.3.1",
     "react-native-safe-area-context": "3.3.2",
-    "react-native-screens": "*",
+    "react-native-screens": "~3.10.1",
     "react-native-svg": "^12.4.0",
     "react-native-web": "0.17.1"
   },
