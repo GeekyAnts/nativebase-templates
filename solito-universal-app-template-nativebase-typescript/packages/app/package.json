@@ -6,7 +6,7 @@
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/native-stack": "^6.5.0",
     "expo-linking": "^3.0.0",
-    "native-base": "^3.3.7",
+    "native-base": "3.4.9",
     "react-native-svg": "^12.3.0",
     "react-native-web": "^0.17.7",
     "solito": "0.0.22"
