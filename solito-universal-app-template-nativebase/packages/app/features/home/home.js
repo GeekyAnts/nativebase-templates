@@ -27,7 +27,7 @@ export function HomeScreen() {
           <Image
             rounded="full"
             source={{
-              uri: 'https://pbs.twimg.com/profile_images/1534837615848849413/6uNTjzMu_400x400.jpg',
+              uri: 'https://pbs.twimg.com/profile_images/1550379416995643392/KeFMAS7m_400x400.png',
             }}
             alt="NextJS Logo"
             resizeMode="contain"
